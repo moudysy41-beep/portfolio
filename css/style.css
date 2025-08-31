@@ -401,18 +401,80 @@ section {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .about {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .about-img img {
-    width: 70vw;
-    margin: 0 auto 2rem auto;
-  }
-  .portfolio-container {
-    grid-template-columns: 1fr;
-  }
-  .contact form .input-box input {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
+    background: #081b29;
+    display: flex; /* horizontal row */
+    flex-direction: row; /* keep horizontal */
+    justify-content: space-around; /* space links evenly */
+    overflow-x: auto; /* allow scrolling if needed */
+    white-space: nowrap; /* prevent wrapping */
+    padding: 0.5rem 0;
+  }
+
+  .navbar a {
+    margin: 0 10px; /* spacing between links */
+    font-size: 18px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* --- Responsive Hamburger Menu --- */
+.menu-icon {
+  display: none;
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    background: #081b29;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+    padding: 1rem 0;
+  }
+  .navbar a {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+  .navbar.active {
+    left: 0;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Font scaling on small screens */
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 36px;
+  }
+  .home-content h3 {
+    font-size: 22px;
+  }
+  .about-text h2 {
+    font-size: 40px;
+  }
+  .section-title {
+    font-size: 40px;
+  }
+  section {
+    padding: 6rem 5% 2rem;
+  }
+  .contact form {
+    padding: 0 1rem;
   }
 }
