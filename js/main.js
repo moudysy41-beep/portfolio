@@ -7,7 +7,7 @@ var typed = new Typed(".text", {
   loop: true,
 });
 
-// NEW --- Scroll Reveal initialization
+// Scroll Reveal initialization
 ScrollReveal({
   reset: true,
   distance: "80px",
@@ -15,15 +15,15 @@ ScrollReveal({
   delay: 200,
 });
 
-// NEW --- Animating elements with Scroll Reveal
+// Animating elements with Scroll Reveal
 ScrollReveal().reveal(".home-content, .section-title", { origin: "top" });
 ScrollReveal().reveal(
-  ".home-sci, .about-img, .skills-container, .portfolio-container, .contact form",
+  ".home-img, .home-sci, .about-img, .skills-container, .portfolio-container, .contact form",
   { origin: "bottom" }
 );
 ScrollReveal().reveal(".home-content h1, .about-text", { origin: "left" });
 
-// NEW --- Active link on scroll functionality
+// Active link on scroll functionality
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("header nav a");
 
@@ -45,7 +45,7 @@ window.onscroll = () => {
   });
 };
 
-// NEW --- Navbar toggle (Hamburger menu)
+// Navbar toggle (Hamburger menu)
 let menu = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
